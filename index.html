@@ -1,0 +1,105 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>E-Cloth Ware Determination APP</title>
+   <link rel="stylesheet" href="styless.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css"> <!-- Weather Icons library -->
+</head>
+<body>
+  <nav>
+     <ul>
+        <li><a href="#" >E-CLOTH WARE DETERMINATION APP </a></li>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">CONTACT</a></li>
+        <li><a href="#">SIGN UP</a></li>
+     </ul>
+  </nav>
+  <div class="weather">  
+     <div>
+        <h2>Real-time Weather Updates</h2>
+        <input type="text" id="city-Name" placeholder="Enter city name">
+        <!-- <button onclick="getLocation()" id="get-Location"> Get Location</button>  -->
+        <button id="get-Location">Get Weather</button>
+        <p id="location-status"></p>
+        <div id="weather-display">
+            
+        </div>
+     <div>
+      <h2>City Weather Overview</h2>
+      <section class="weather-container">
+         <div class="location" id="nairobi">
+             <h2>Nairobi</h2>
+             <div class="weather-info">
+                 <i class="wi wi-day-sunny"></i> <!-- Weather icon -->
+                 <p id="nairobi-temperature"></p>
+                 <p id="nairobi-description"></p>
+             </div>
+         </div>
+ 
+         <div class="location" id="mombasa">
+             <h2>Mombasa</h2>
+             <div class="weather-info">
+                 <i class="wi wi-day-cloudy"></i> <!-- Weather icon -->
+                 <p id="mombasa-temperature"></p>
+                 <p id="mombasa-description"></p>
+             </div>
+         </div>
+ 
+         <div class="location" id="eldoret">
+             <h2>Eldoret</h2>
+             <div class="weather-info">
+                 <i class="wi wi-showers"></i> <!-- Weather icon -->
+                 <p id="eldoret-temperature"></p>
+                 <p id="eldoret-description"></p>
+             </div>
+         </div>
+     </section>
+     </div>
+    </div>
+     <div class="clothing-recommendations">
+        <h2>Clothing Recommendations</h2>
+        <div class="suggestion-box">
+            <h3>Suggested Clothing Items</h3>
+            <p id="clothing-suggestions"></p>
+        </div>
+        
+        </div>
+        <div class="alerts-notifications">
+           <h2> Weather Updates Alerts </h2>
+           <div class="notification-settings">
+               <form id="notification-form">
+                   <label for="alert-frequency">Alert Frequency</label>
+                   <select id="alert-frequency" name="alert-frequency">
+                       <option value="hourly">2 days</option>
+                       <option value="daily">4 days </option>
+                       <option value="weekly">Weekly</option>
+                   </select>
+   
+                   <label for="alert-type">Alert Type:</label>
+                   <select id="alert-type" name="alert-type">
+                       <option value="all">All</option>
+                       <option value="severe">Severe Weather</option>
+                       <option value="temperature">Temperature Alerts</option>
+                   </select>
+   
+                   <button type="button" onclick="updateAlertSettings()">Save Settings</button>
+               </form>
+           </div>
+           <div class="trends-analysis">
+              <h2>Historical Weather Trends Analysis</h2>
+              <div class="data-filters">
+                  <label for="data-filter">Filter by:</label>
+                  <select id="data-filter" onchange="updateChart()">
+                      <option value="day">Day</option>
+                      <option value="week">Week</option>
+                      <option value="month">Month</option>
+                      <option value="year">Year</option>
+                  </select>
+              </div>
+              <canvas id="trendsChart"></canvas>
+          </div>
+   <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "phase-1-project--e-cloth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FRANK7434/PHASE-1-PROJECT--E-CLOTH.git"
+  },
+  "author": "Sonfransisco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FRANK7434/PHASE-1-PROJECT--E-CLOTH/issues"
+  },
+  "homepage": "https://github.com/FRANK7434/PHASE-1-PROJECT--E-CLOTH#readme"
+}

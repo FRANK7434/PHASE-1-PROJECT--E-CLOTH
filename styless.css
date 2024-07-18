@@ -1,0 +1,177 @@
+ /* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #00785D;
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: #333;
+    color: #b7c9ba;
+    padding: 10px 0;
+    border-radius: 30px;
+    height: 50px;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 20px;
+}
+
+nav ul li {
+    margin: auto;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Two-column layout styling */
+.weather {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 20px; */
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.weather > div {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #32BFDB;
+    margin-left: 2px;
+    
+}
+
+/* Content box styling */
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #539BA9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #575757;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+/* Additional styling */
+#weather-display p, #clothing-suggestions, #location-status {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #e4e4e4;
+    border-radius: 5px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .weather {
+        flex-direction: column;
+    }
+}
+.weather-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+    
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.location {
+    background-color: #fbc323;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: slideIn 15s ease-in-out infinite; /* Change duration to 15s (3 minutes) */
+    animation-fill-mode: both;
+    margin-bottom: 20px;
+}
+
+@keyframes slideIn {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    75% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.location:nth-child(2) {
+    animation-delay: 5s; /* Delay for the second location */
+}
+
+.location:nth-child(3) {
+    animation-delay: 10s; /* Delay for the third location */
+}
+
+.location h2 {
+    margin-bottom: 10px;
+}
+
+.weather-info {
+    margin-top: 10px;
+}
+
+.weather-info i {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
