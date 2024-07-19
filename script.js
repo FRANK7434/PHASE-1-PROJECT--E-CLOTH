@@ -52,9 +52,6 @@ function displayWeather(data) {
 const getWeatherBtn = document.getElementById("get-Location");
 getWeatherBtn.addEventListener("click", getWeather);
 
-// Replace with your OpenWeatherMap API key
- 
-
 // Fetch weather data from OpenWeatherMap API
 function fetchWeather(cityId, cityName) {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?id=${cityId}&appid=${apiKey}&units=metric`;
