@@ -35,9 +35,7 @@ function displayWeather(data) {
     // Extract relevant data from the API response
     const cityName = data.name;
     const temperature = data.main.temp;
-    const humidity = data.main.humidity;
-    const windSpeed = data.wind.speed;
-
+   
     // Create and append elements to display
     const cityElement = document.createElement("h3");
     cityElement.textContent = `Weather in ${cityName}`;
@@ -45,16 +43,9 @@ function displayWeather(data) {
     const tempElement = document.createElement("p");
     tempElement.textContent = `Temperature: ${temperature}°C`;
 
-    const humidityElement = document.createElement("p");
-    humidityElement.textContent = `Humidity: ${humidity}%`;
-
-    const windElement = document.createElement("p");
-    windElement.textContent = `Wind Speed: ${windSpeed} m/s`;
-
     weatherDisplay.appendChild(cityElement);
     weatherDisplay.appendChild(tempElement);
-    weatherDisplay.appendChild(humidityElement);
-    weatherDisplay.appendChild(windElement);
+     
 }
 
 // Event listener for button click to fetch weather data
@@ -128,7 +119,7 @@ function displayWeather(data) {
 
     // Display clothing recommendation
     const clothingSuggestions = document.getElementById("clothing-suggestions");
-    clothingSuggestions.textContent = `Recommended Clothing: ${clothingRecommendation}`;
+    clothingSuggestions.textContent = ` ${clothingRecommendation}`;
 }
 
 // Event listener for button click to fetch weather data
